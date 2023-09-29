@@ -1,0 +1,48 @@
+@import "./styles/variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: $roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  background-color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin: auto 0px 0px 0px;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: $dark-bg;
+  color: #fff;
+  span {
+    color: aqua;
+  }
+}

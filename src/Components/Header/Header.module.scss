@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.header {
+  background-color: $dark-bg;
+  padding: 20px 0;
+  color: #fff;
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    &__cover {
+      display: flex;
+      align-items: center;
+    }
+    &__img {
+      max-width: 100px;
+      width: 100%;
+      /* background-color: #fff; */
+    }
+    &__text {
+      text-align: center;
+      font-family: $montserrat;
+      h1 {
+        color: #fff;
+        font-weight: 00;
+        span {
+          color: aqua;
+        }
+      }
+      small {
+        color: #fff;
+        span {
+          color: aqua;
+        }
+      }
+    }
+  }
+}
