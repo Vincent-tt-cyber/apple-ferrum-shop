@@ -3,6 +3,9 @@ import styles from "./Header.module.scss";
 import Logo from "../../assets/images/AppleFerrumLogo@2x.png";
 import { Link } from "react-router-dom";
 import { ButtonCatalog } from "./components/ButtonCatalog/ButtonCatalog";
+import { SearchInput } from "./components/SearchInput/SearchInput";
+import { FavouritesLink } from "./components/FafouritesLink/FavouritesLink";
+import { CartLink } from "./components/CartLink/CartLink";
 
 export const Header = () => {
   return (
@@ -26,8 +29,11 @@ export const Header = () => {
               </div>
             </Link>
             <ButtonCatalog />
-            <input type="text" placeholder="Найти" />
-            <nav>избранное, корзина, логин</nav>
+            <SearchInput />
+            <nav>
+              <FavouritesLink />
+              <CartLink />
+            </nav>
           </div>
         </div>
       </header>
