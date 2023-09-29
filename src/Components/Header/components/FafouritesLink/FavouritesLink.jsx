@@ -7,7 +7,7 @@ export const FavouritesLink = () => {
     <>
       <div className={styles["link"]}>
         <BsFillHeartFill />
-        <span className={styles["count"]}>{!null && 5}</span>
+        <span className={styles["count"]}>{!null && 0}</span>
       </div>
     </>
   );

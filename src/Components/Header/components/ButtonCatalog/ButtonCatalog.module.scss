@@ -19,3 +19,10 @@
     background-color: darken($aqua-bg, 5);
   }
 }
+
+@media (max-width: 700px) {
+  .button {
+    padding: 10px;
+    font-size: 18px;
+  }
+}

@@ -8,6 +8,7 @@ import { FavouritesLink } from "./components/FafouritesLink/FavouritesLink";
 import { CartLink } from "./components/CartLink/CartLink";
 
 export const Header = () => {
+  const [isOpenMenu, setIsOpenMenu] = React.useState(false);
   return (
     <>
       <header className={styles["header"]}>
@@ -28,12 +29,19 @@ export const Header = () => {
                 </small>
               </div>
             </Link>
-            <ButtonCatalog />
-            <SearchInput />
+            <div className={styles["header-catalog"]}>
+              <ButtonCatalog />
+            </div>
+            <div className={styles["header-search"]}>
+              <SearchInput />
+            </div>
             <nav>
               <FavouritesLink />
               <CartLink />
             </nav>
+            <div className={styles["header-burger-menu"]}>
+              <span></span>
+            </div>
           </div>
         </div>
       </header>

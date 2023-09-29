@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "./Components/Header/Header";
 import { Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   return (
@@ -8,10 +9,7 @@ function App() {
       <Header />
       <div className="wrapper">
         <Routes>
-          <Route
-            path="/"
-            element={<div className="container">Main content </div>}
-          />
+          <Route path="/" element={<Home />} />
           <Route path="/*" element={<div>Страница не найдена.</div>} />
         </Routes>
       </div>
