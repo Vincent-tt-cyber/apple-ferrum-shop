@@ -10,7 +10,10 @@ function App() {
       <div className="wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/*" element={<div>Страница не найдена.</div>} />
+          <Route
+            path="/*"
+            element={<div className="container">Страница не найдена 😔</div>}
+          />
         </Routes>
       </div>
       <footer className="footer">
