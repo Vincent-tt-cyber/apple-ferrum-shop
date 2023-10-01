@@ -23,7 +23,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className={styles.home}>
       <div className="container">
         {isLoading ? (
           <h1>Загрузка...</h1>
@@ -35,6 +35,6 @@ export const Home = () => {
           </Layout>
         )}
       </div>
-    </>
+    </div>
   );
 };

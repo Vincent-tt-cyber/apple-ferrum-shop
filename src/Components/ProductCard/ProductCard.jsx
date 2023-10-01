@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ProductCard.module.scss";
+import { FaCartShopping } from "react-icons/fa6";
+import { BsFillHeartFill } from "react-icons/bs";
 
 const ProductCard = ({ product }) => {
   const [discount, setDiscount] = useState(0);
@@ -15,28 +17,33 @@ const ProductCard = ({ product }) => {
   return (
     <>
       <div className={styles["card"]}>
-        <div className={styles["card-image-cover"]}>
-          <img
-            className={styles[""]}
-            src={product.imageURL}
-            alt={product.model}
-          />
+        <img src={product.imageURL} alt={product.model} />
+        <div className={styles["card-text"]}>
+          <h3 className={styles["card__title"]}>
+            {product.model}, {product.store && product.store + "GB, "}
+            {product.color && product.color}
+          </h3>
         </div>
-        <div className={styles["card-info"]}>
-          <div className={styles["card-price"]}>
+        <div className={styles["card-prices"]}>
+          <div className={styles["card-prices__num"]}>
             <div>
-              <h3 className={styles["card-price__active"]}>
+              <h4 className={styles["card__active-price"]}>
                 {product.activePrice.toLocaleString("ru-RU")}₽
-              </h3>
-              <h4 className={styles["card-price__past"]}>
-                {product.pastPrice.toLocaleString("ru-RU")}₽
               </h4>
+              <h3 className={styles["card__past-price"]}>
+                {product.pastPrice.toLocaleString("ru-RU")}₽
+              </h3>
             </div>
-            <small>-{discount}%</small>
+            <small className={styles["discount"]}>-{discount}%</small>
           </div>
-          <p>
-            {product.model} | {product.store}ГБ
-          </p>
+          <div className={styles["card-nav"]}>
+            <button className={styles["card__btn"]}>
+              <BsFillHeartFill color="#fff" />
+            </button>
+            <button className={styles["card__btn"]}>
+              <FaCartShopping color="#fff" />
+            </button>
+          </div>
         </div>
       </div>
     </>
