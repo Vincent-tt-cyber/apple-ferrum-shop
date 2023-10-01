@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  overflow: hidden;
+  &-image {
+    &-cover {
+      max-width: 100px;
+      margin: 0px 0px 10px 0px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-info {
+    p {
+      // background-color: #ccc;
+      font-family: $roboto;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &-price {
+    display: flex;
+    // justify-content: space-between;
+    align-items: flex-start;
+    font-family: $montserrat;
+    margin: 0px 0px 5px 0px;
+    &__active {
+      font-size: 16px;
+      color: $darken-aqua-bg;
+    }
+    &__past {
+      font-size: 10px;
+      text-decoration: line-through;
+      color: #717171bb;
+    }
+  }
+}

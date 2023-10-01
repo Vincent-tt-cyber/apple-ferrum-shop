@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./Home.module.scss";
 import axios from "axios";
 import Layout from "../../Components/Layout/Layout";
+import ProductCard from "../../Components/ProductCard/ProductCard";
 
 export const Home = () => {
   const [iphones, setIphones] = React.useState([]);
@@ -29,15 +30,7 @@ export const Home = () => {
         ) : (
           <Layout>
             {iphones.map((iphone) => (
-              <div key={iphone.id}>
-                <img
-                  width={200}
-                  height={200}
-                  src={iphone.imageURL}
-                  alt={iphone.model}
-                />
-                <h4>{iphone.model}</h4>
-              </div>
+              <ProductCard key={iphone.id} product={iphone} />
             ))}
           </Layout>
         )}
